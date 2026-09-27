@@ -1,18 +1,18 @@
 # Friend Forge
 
-Explore a small isometric island as your own Rare Friend. Buy Iron Ore, reveal SDK-settled artifacts at the Central Forge, and complete a twelve-item Collection.
+Explore a small isometric island as your own Rare Friend. Spend simulated RF on Iron Ore, use it for SDK-settled Forge plays, and collect twelve artifacts. Each return to the Forge starts another RF-funded play.
 
 - **Builder / contact:** [@RomaMartynyuk](https://github.com/RomaMartynyuk)
-- **Category:** Character Spotlight
+- **Category:** Token Activity
 - **Source:** [Friend Forge on GitHub — `sdk-integration`](https://github.com/RomaMartynyuk/friend-forge/tree/sdk-integration)
 - **Playable preview:** [Play Friend Forge](https://romamartynyuk.github.io/friend-forge/)
 - **Stack:** FriendSDK v0.1.2, TypeScript/React, HTML/CSS/canvas
 
 ## What did you build?
 
-The selected Generations NFT is the character you control—not just an avatar in a profile card. Walk the island with keyboard or touch controls, use building labels to auto-walk around colliders, and meet the Ore Mine, Central Forge, Collection, Reforge and Community Furnace. The twelve artifacts have distinct artwork and rarity. A Forge play ends in a game-styled rarity roll, silhouette and full-artwork reveal; the client never chooses the result.
+The main loop is a repeatable RF-spending activity: buy Iron Ore for 1 simulated RF, spend one Ore on a Forge play, and discover an artifact. The selected Generations NFT is the character you control while walking between the Ore Mine, Central Forge, Collection and Reforge. The twelve artifacts have distinct artwork and rarity. A Forge play ends in a game-styled rarity roll, silhouette and full-artwork reveal; the client never chooses the result.
 
-The Friend's canonical character artwork and SDK sound cues remain intact. The SDK selects an owned hardwired Friend and keeps its simulated RF, Ore and artifacts with that Friend's canonical wallet. That playable, wallet-linked character is why **Character Spotlight** is the best fit.
+The SDK selects an owned hardwired Friend and keeps its simulated RF, Ore and artifacts with that Friend's canonical wallet. Mining Dig offers an optional 2 RF expedition that buys exactly two Ore; Reforge can recycle an eligible duplicate through SDK redemption, another Ore purchase and an ordinary Forge play. These are different routes into the same spending loop, not extra reward faucets or improved odds. The playable Friend, canonical art and sound remain central to the experience, but **Token Activity** is the submission's primary category because RF spending drives its collecting loop.
 
 ## Playable demo and local run
 
@@ -40,9 +40,9 @@ npx friendsdk dev ./games/friend-forge --host 0.0.0.0 --port 4173
 
 MIX controls volume, mute and ambience. Sound and motion can be reduced; the menus work inside the SDK container on desktop and mobile.
 
-## RF costs, outcomes and authority
+## RF activity, outcomes and authority
 
-All RF balances and rewards in this submission are **simulated**. One Iron Ore costs **1 RF** and one normal Forge consumes **one Iron Ore**. Only Iron is actionable; Gold and Diamond are odds previews, not additional SDK tiers. The configured Iron outcome table is:
+All RF balances, purchases and rewards in this submission are **simulated FriendSDK preview activity**—not real token transactions or on-chain burns. The core repeatable path is **1 RF → 1 Iron Ore → 1 Forge play → 1 SDK-settled artifact**. A Mining Dig expedition costs **2 RF for exactly 2 Iron Ore** and changes the activity, not the guaranteed Ore quantity. Reforge redeems one eligible surplus artifact, buys Iron and performs a standard Forge play; it adds no special rarity odds. Only Iron is actionable; Gold and Diamond are odds previews, not additional SDK tiers. The configured Iron outcome table is:
 
 | Rarity | Chance | RF on redemption |
 |---|---:|---:|
@@ -53,7 +53,7 @@ All RF balances and rewards in this submission are **simulated**. One Iron Ore c
 | Legendary | 2.5% | 0.50 RF |
 | Mythic | 0.5% | 2 RF |
 
-The configured expected redemption value is **0.065 RF per Forge**, with a **2 RF** maximum. This is a collecting game, not a promise of profit. Zero-reward artifacts remain collectibles and cannot be redeemed. The exact twelve outcomes and weights live in [`game.json`](https://github.com/RomaMartynyuk/friend-forge/blob/sdk-integration/games/friend-forge/game.json); the [economy notes](https://github.com/RomaMartynyuk/friend-forge/blob/sdk-integration/ECONOMY.md) explain costs and limitations.
+The configured expected redemption value is **0.065 RF per Forge**, with a **2 RF** maximum. This is a collecting game, not a promise of profit. Zero-reward artifacts remain collectibles and cannot be redeemed. RF paid for Ore is a **simulated SDK purchase**, not a claimed burn; there is no separate burn counter or live RF volume. The exact twelve outcomes and weights live in [`game.json`](https://github.com/RomaMartynyuk/friend-forge/blob/sdk-integration/games/friend-forge/game.json); the [economy notes](https://github.com/RomaMartynyuk/friend-forge/blob/sdk-integration/ECONOMY.md) explain costs and limitations.
 
 The SDK owns `buy`, `play`, `settle`, `redeem` and pending-play recovery. The UI's rarity roll may be seeded by `playId`, but it cannot reroll or change an outcome. Reforge is **not atomic** and does **not** guarantee an upgrade. No live contracts, RF transfers or global contribution state are claimed.
 

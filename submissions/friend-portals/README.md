@@ -1,11 +1,17 @@
 # Friend Portals
 
-Explore a floating 3D island as your own Rare Friend and restore it by completing four distinct puzzle worlds. Each portal offers a different challenge, awards a shard, and unlocks the next part of the journey.
+Explore a floating 3D island as your own Rare Friend and restore it by completing four distinct puzzle worlds.
+
+![Friend Portals](./assets/friend-portal-gameplay.png)
+
+## Gameplay
+
+![Friend Portals Gameplay](./assets/friend-portal-gameplay.gif)
 
 - **Builder / contact:** @RomaMartynyuk
 - **Category:** Character Spotlight
-- **Source:** [Friend Portals on GitHub](https://github.com/RomaMartynyuk/friend-portals)
-- **Playable preview:** [Play Friend Portals](https://romamartynyuk.github.io/friend-portals/)
+- **Source:** ...
+- **Playable preview:** ...
 - **Stack:** FriendSDK v0.1.3, TypeScript, React, React Three Fiber, Three.js
 
 ## What did you build?

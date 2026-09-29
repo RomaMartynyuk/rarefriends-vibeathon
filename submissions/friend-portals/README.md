@@ -10,8 +10,8 @@ Explore a floating 3D island as your own Rare Friend and restore it by completin
 
 - **Builder / contact:** @RomaMartynyuk
 - **Category:** Character Spotlight
-- **Source:** ...
-- **Playable preview:** ...
+- **Source:** [Friend Portals on GitHub](https://github.com/RomaMartynyuk/friend-portals)
+- **Playable preview:** [Play Friend Portals](https://romamartynyuk.github.io/friend-portals/)
 - **Stack:** FriendSDK v0.1.3, TypeScript, React, React Three Fiber, Three.js
 
 ## What did you build?
